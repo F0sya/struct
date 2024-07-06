@@ -46,19 +46,25 @@ int main() {
     
     int starter_position_x; cout << "Enter a start coord x:"; cin >> starter_position_x;
     int starter_position_y; cout << "Enter a start coord y:"; cin >> starter_position_y;
-
+    
     Rect rect = {starter_position_x,starter_position_y,input_width,input_height };
+
     system("cls");
     printRect(rect);
     system("pause");
+
     cout << "Choose new coord x:"; cin >> starter_position_x;
     cout << "Choose new coord y:"; cin >> starter_position_y;
+
     system("cls");
+
     moveRect(rect, starter_position_x, starter_position_y);
     printRect(rect);
     system("pause");
+
     cout << "Choose new width:"; cin >> input_width;
     cout << "Choose new height:"; cin >> input_height;
+
     system("cls");
     changeSize(rect, input_width, input_height);
     printRect(rect);
